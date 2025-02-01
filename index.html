@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wxd的音乐站</title>
+    <link rel="stylesheet" href="static/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="输入歌曲名或歌手...">
+        <select id="apiSelect" class="api-select">
+            <option value="api1">网易云音乐</option>
+            <option value="api2">酷狗音乐</option>
+        </select>
+        <div class="search-icon" id="searchBtn">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+
+    <div class="results-container" id="results">
+        <!-- 初始加载提示 -->
+        <div class="loading-placeholder">
+            <i class="fas fa-music fa-spin"></i>
+            <p>输入关键词开始搜索音乐</p>
+        </div>
+    </div>
+    <div class="player-container" id="player">
+        <div class="album-art-wrapper">
+            <img src="static/images/pic_player.png" class="album-art" id="currentArt" alt="封面">
+        </div>
+        <div class="player-controls">
+            <div class="track-info">
+                <h3 id="trackTitle">未选择歌曲</h3>
+                <p id="trackArtist">-</p>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress"></div>
+            </div>
+            <div class="control-buttons">
+                <button class="control-btn" id="prevBtn">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="control-btn" id="playPauseBtn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="control-btn" id="nextBtn">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+                <!-- 音量控制 -->
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1" style="width: 100px;">
+                <span id="volumeLabel">100%</span> <!-- 显示音量百分比 -->
+
+                <span class="time-display" id="currentTime">0:00</span>
+                <span class="time-display" id="duration">0:00</span>
+            </div>
+        </div>
+        <div id="lyrics-container">
+            <div id="lyricsText">等待歌词...</div>
+        </div>
+        <div id="errorContainer"></div>  <!-- 用于显示错误信息 -->
+    </div>
+    <script src="static/js/jquery-3.6.0.min.js"></script>
+    <script src="static/js/lodash.min.js"></script>
+    <script src="static/js/howler.min.js"></script>
+    <script src="static/js/line.js" color="255, 165, 0" opacity="1" count="200" zindex="-2"></script>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/mouse-click.js"></script>
+    <script src="static/js/clickEffects.js"></script>
+    <canvas width="1777" height="841" style="position: fixed; left: 0; top: 0; z-index: 2147483647; pointer-events: none;"></canvas>
+</body>
+</html>
