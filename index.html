@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="输入歌曲名或歌手...">
+        <input type="text" id="searchInput" placeholder="Enter a song title or artist...">
         <select id="apiSelect" class="api-select">
-            <option value="api1">网易云音乐</option>
-            <option value="api2">酷狗音乐</option>
+            <option value="api1">Cloud Music</option>
+            <option value="api2">Kugou Music</option>
         </select>
         <div class="search-icon" id="searchBtn">
             <i class="fas fa-search"></i>
@@ -23,7 +23,7 @@
         <!-- 初始加载提示 -->
         <div class="loading-placeholder">
             <i class="fas fa-music fa-spin"></i>
-            <p>输入关键词开始搜索音乐</p>
+            <p>Enter a keyword</p>
         </div>
     </div>
     <div class="player-container" id="player">
@@ -57,7 +57,7 @@
             </div>
         </div>
         <div id="lyrics-container">
-            <div id="lyricsText">等待歌词...</div>
+            <div id="lyricsText">Wait for the lyrics...</div>
         </div>
         <div id="errorContainer"></div>  <!-- 用于显示错误信息 -->
     </div>

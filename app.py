@@ -4,7 +4,7 @@ from crawler import wyy_music
 from  crawler import kg_music
 from flask_cors import CORS
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})  #
 # 基础配置
 app.config.update({
     'TEMPLATES_AUTO_RELOAD': True,
