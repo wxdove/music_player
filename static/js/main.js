@@ -201,8 +201,7 @@ const displayLyrics = () => {
         dom.lyricsText.textContent = currentLyric.text;
 
         const lineHeight = 30;  // 每行的高度（可以根据实际情况调整）
-        const offset = currentLyricIndex * lineHeight;  // 计算歌词滚动的偏移量
-        dom.lyricsText.scrollTop = offset;
+        dom.lyricsText.scrollTop = currentLyricIndex * lineHeight;
     }
 };
 // 更新歌词
